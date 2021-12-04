@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.MainActivity"
+    android:background="@color/white_smoke">
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/rv_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@drawable/half_rounded"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/hi_welcome"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/relativeLayout"
+            app:layout_constraintVertical_bias="0.15999999" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_search"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:elevation="50dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="120dp"
+            app:layout_constraintVertical_bias="0.17000002" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tv_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:maxLines="1"
+                android:hint="@string/search"
+                android:searchIcon="@drawable/ic_search"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/searh_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/framelayout">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/ic_baseline_person_search_24"
+            tools:ignore="contentDescription"/>
+
+        <TextView
+            android:id="@+id/text_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/please_input_id_name"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/imageView"
+            android:textColor="@color/Gray"
+            android:fontFamily="@font/nunito_bold"
+            tools:ignore="HardcodedText"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_user"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/framelayout" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rv_user" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

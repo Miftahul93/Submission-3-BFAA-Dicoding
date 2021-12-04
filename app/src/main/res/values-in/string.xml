@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Github User</string>
+
+    <string name="username">Nama Pengguna</string>
+    <string name="location">Lokasi</string>
+    <string name="your_profile">Profil Kamu</string>
+    <string name="followers">Pengikut</string>
+    <string name="following">.Mengikuti</string>
+    <string name="repository">.Simpanan</string>
+    <string name="tab_1">Pengikut</string>
+    <string name="tab_2">Mengikuti</string>
+    <string name="name">Nama</string>
+    <string name="search">Cari Disini..</string>
+    <string name="hi_welcome">Hallo, Selamat Datang..!!</string>
+    <string name="language_setting">Pengaturan Bahasa</string>
+    <string name="created_by">Karya : Miftahul Ulum</string>
+    <string name="please_input_id_name">Silahkan Masukkan Nama ID</string>
+    <string name="reminder">Pengingat</string>
+    <string name="splashscreen">splashscreen</string>
+    <string name="my_favorite">My Favorite</string>
+</resources>
